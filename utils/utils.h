@@ -18,7 +18,7 @@ typedef nx_struct my_msg_t {
 #define SUBSCRIBE 5 
 #define SUBACK 6
 
-#define PAN 9
+#define AM_PAN_COORD_ADDR 9 //AM_BROADCAST_ADDR
 
 // 7 - 6 - 5 - 4 - 3 - 2 - 1 -0 
 // msg type 7 -4
