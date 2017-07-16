@@ -5,6 +5,7 @@
 #define TIMER_DELAY 2000
 #define CONNECT_RESEND_FACTOR 1000
 #define TIME_OUT_TIMER (TIMER_DELAY + CONNECT_RESEND_FACTOR*TOS_NODE_ID)
+#define QOS_TIME_OUT (TIME_OUT_TIMER / 10)
 
 #define SENSOR_TIMER_MODULAR 5000
 #define SENSOR_TIMER 2000 
@@ -125,37 +126,27 @@ module NodeC
 
 
 	event void MessageTask.runTask(uint16_t dst, uint8_t msg_type, uint8_t qos, uint16_t nodeID, uint8_t topic, uint16_t payload){
-			message_t packet;
 			my_msg_t* pckt;
-			pckt = call Packet.getPayload(&packet,sizeof(my_msg_t));
+			pckt = call Packet.getPayload(&publish_packet,sizeof(my_msg_t));
 			pckt->msg_type = msg_type;
 			pckt->qos = qos;
 			pckt->nodeID = nodeID;
 			pckt->topic = topic;
 			pckt->payload = payload;
 			//printf("[NODE %u] DEBUG: msg_type:%u, nodeID: %u, topic: %u, payload:%u\n", NODE_ID, msg_type,nodeID,topic,payload);
-			switch(msg_type)
-			{
-				case(CONNECT):
-					//handle_connect(dst, packet);
-					break;
-				/*case(SUBSCRIBE):
-					handle_subscribe(dst, packet);
-					break;
-				case(PUBLISH):
-					handle_publish(dst, packet);
-					break;*/
-				default:
-					break;
-			}
-			//global_packet = packet;
-
+			waiting_puback = TRUE;
+	    	if( call AMSend.send(dst ,&publish_packet,sizeof(my_msg_t)) == SUCCESS)
+	    	{
+	    		printf("[NODE %u] Sent Publish to PAN Coordinator, Topic:%u , Data: %u\n", NODE_ID, my_sensorID, sensor_data);
+	    	}
+	    	else
+	    		printf("[NODE %u] FAIL!! Publish. Topic:%u , Data: %u\n", NODE_ID, my_sensorID, sensor_data);
+	    	call TimeOutTimer.startOneShot(TIME_OUT_TIMER);
 	}
+	
 	task void connackRxTask(){
 		call RandomDataTimer.startPeriodic(DATA_TIMER);
         actual_status = SUBSCRIBE;
-        post susbcribeTask();
-        //call MessageTask.postTask(pan_address, SUBSCRIBE,0,NODE_ID,TEMPERATURE_ID,0);
 	}
 
 	task void susbcribeTask(){
@@ -212,18 +203,18 @@ module NodeC
 	event void TemperatureSensor.readDone(error_t result, uint16_t data) {
 		printf("[NODE %u]New data available from Topic:%u; Temperature: %u \n",NODE_ID, my_sensorID, data);
 		sensor_data = data;
-		//call MessageTask.postTask(pan_address,PUBLISH,0,NODE_ID,my_sensorID,data);
+		call MessageTask.postTask(pan_address,PUBLISH,0,NODE_ID,my_sensorID,data);
 
 	}
 	event void HumiditySensor.readDone(error_t result, uint16_t data) {
 		printf("[NODE %u]New data available from Topic:%u; Humidity: %u\n",NODE_ID, my_sensorID, data);
 		sensor_data = data;
-		//call MessageTask.postTask(pan_address, PUBLISH,0,NODE_ID,my_sensorID,data);
+		call MessageTask.postTask(pan_address, PUBLISH,0,NODE_ID,my_sensorID,data);
 	}
 	event void LuminositySensor.readDone(error_t result, uint16_t data) {
 		printf("[NODE %u]New data available from Topic:%u; Luminosity: %u\n",NODE_ID,my_sensorID, data);
 		sensor_data = data;
-		//call MessageTask.postTask(pan_address, PUBLISH,0,NODE_ID,my_sensorID,data);
+		call MessageTask.postTask(pan_address, PUBLISH,0,NODE_ID,my_sensorID,data);
 	}
 	event void RandomDataTimer.fired() {
         switch(my_sensorID)
@@ -249,7 +240,7 @@ module NodeC
 		}else if (waiting_puback){
 			//da controllare la storia delle publish con timer...
 			printf("[NODE %u] Puback not received. Try again\n",NODE_ID);
-			//call MessageTask.postTask(pan_address,PUBLISH,0,NODE_ID,my_sensorID,sensor_data);
+			call MessageTask.postTask(pan_address,PUBLISH,0,NODE_ID,my_sensorID,sensor_data);
 		}else
 			printf("[NODE %u] Timeout expired, but nothing to resend.\n", NODE_ID);
 	}
