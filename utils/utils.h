@@ -4,10 +4,12 @@
 
 
 typedef nx_struct my_msg_t {
-	//nx_uint8_t header;
+	//nx_uint16_t header;
 	nx_uint8_t msg_type;
 	nx_uint8_t qos;
-	nx_uint8_t nodeID;
+	nx_uint16_t nodeID;
+
+	nx_uint8_t topic;
 	nx_uint16_t payload;
 } my_msg_t;
 
@@ -20,6 +22,12 @@ typedef nx_struct my_msg_t {
 
 #define AM_PAN_COORD_ADDR 9 //AM_BROADCAST_ADDR
 
+#define TASKNUMBER 3
+
+#define TEMPERATURE_ID 0
+#define HUMIDITY_ID 1
+#define LUMINOSITY_ID 2
+
 // 7 - 6 - 5 - 4 - 3 - 2 - 1 -0 
 // msg type 7 -4
 // 3 - 2 qos
@@ -30,14 +38,6 @@ typedef nx_struct my_msg_t {
 enum{
 AM_MY_MSG = 6,
 };
-
-/*void simple_msg(puback_msg_t * msg,uint8_t node_id,uint8_t topic, uint8_t publish_id)
-{
-	*msg=PUBACK_CODE & NODE_ID_MASK;
-	*msg|=(node_id & NODE_ID_MASK)<<PUBACK_NODE_ID_ALIGNMENT;
-	*msg|=(topic & PUBLISH_TOPIC_MASK)<<PUBACK_TOPIC_ALIGNMENT;
-	*msg|=publish_id<<PUBACK_ID_ALIGNMENT;
-}*/
 
 
 #endif

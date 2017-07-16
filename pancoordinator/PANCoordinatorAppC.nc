@@ -11,6 +11,7 @@ implementation {
 	components new AMSenderC(AM_MY_MSG);
 	components new AMReceiverC(AM_MY_MSG);
 	components ActiveMessageC;
+	components MessageTaskC as SendMessageTaskC;
 
 	components SerialPrintfC;
     components SerialStartC;
@@ -22,4 +23,5 @@ implementation {
   	App.SplitControl -> ActiveMessageC;
   	App.PacketAcknowledgements -> ActiveMessageC;
     App.Packet -> AMSenderC;
+    App.MessageTask -> SendMessageTaskC;
 }

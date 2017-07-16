@@ -17,6 +17,7 @@ implementation {
     components new FakeSensorC() as LuminositySensor;
     components new TimerMilliC() as RandomDataTimerC;
     components new TimerMilliC() as TimeOutTimerC;
+    components MessageTaskC as SendMessageTaskC;
 
     //printf components
     components SerialPrintfC;
@@ -34,4 +35,5 @@ implementation {
     App.LuminositySensor -> LuminositySensor;
     App.RandomDataTimer -> RandomDataTimerC;
     App.TimeOutTimer -> TimeOutTimerC;
+    App.MessageTask -> SendMessageTaskC;
 }
