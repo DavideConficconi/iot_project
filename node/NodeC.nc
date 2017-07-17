@@ -4,12 +4,12 @@
 #define NODE_ID TOS_NODE_ID
 #define TIMER_DELAY 2000
 #define CONNECT_RESEND_FACTOR 1000
-#define TIME_OUT_TIMER (TIMER_DELAY + CONNECT_RESEND_FACTOR*TOS_NODE_ID)
+#define TIME_OUT_TIMER (TIMER_DELAY + CONNECT_RESEND_FACTOR*NODE_ID)
 #define QOS_TIME_OUT (TIME_OUT_TIMER / 10)
 
-#define SENSOR_TIMER_MODULAR 5000
+#define SENSOR_TIMER_MODULAR 20000
 #define SENSOR_TIMER 2000 
-#define DATA_TIMER (SENSOR_TIMER + SENSOR_TIMER_MODULAR*TOS_NODE_ID)
+#define DATA_TIMER (SENSOR_TIMER + SENSOR_TIMER_MODULAR*NODE_ID)
 
 
 module NodeC
@@ -116,6 +116,10 @@ module NodeC
     		actual_status = SUBACK;
     		call TimeOutTimer.stop();
     		printf("[NODE %u] Suback received by PAN Coordinator\n", NODE_ID);
+    	}else if (rx_msg->msg_type == PUBACK){
+    		waiting_puback = FALSE;
+    		call TimeOutTimer.stop();
+    		printf("[NODE %u] Puback received by PAN Coordinator\n", NODE_ID);
     	}else if (rx_msg->msg_type == PUBLISH){
     		printf("[NODE %u] Publish received by PAN Coordinator, Topic: %u, Data: %u\n", NODE_ID, rx_msg->topic,rx_msg->payload);
     	}
@@ -147,6 +151,7 @@ module NodeC
 	task void connackRxTask(){
 		call RandomDataTimer.startPeriodic(DATA_TIMER);
         actual_status = SUBSCRIBE;
+        post susbcribeTask();
 	}
 
 	task void susbcribeTask(){
@@ -155,7 +160,7 @@ module NodeC
 		pckt->msg_type = SUBSCRIBE;
 		pckt->qos = 0;
 		pckt->nodeID = NODE_ID;
-		pckt->topic = 0;
+		pckt->topic = my_sensorID;// + 1;
 		pckt->payload = 0;
 		//printf("[NODE %u] DEBUG: msg_type:%u, qos:%u nodeID: %u, topic: %u, payload:%u\n", NODE_ID, pckt->msg_type, pckt->qos,
 		//	pckt->nodeID,pckt->topic,pckt->payload);

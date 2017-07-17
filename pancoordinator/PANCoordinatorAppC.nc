@@ -12,6 +12,7 @@ implementation {
 	components new AMReceiverC(AM_MY_MSG);
 	components ActiveMessageC;
 	components MessageTaskC as SendMessageTaskC;
+	components new TimerMilliC() as TimeOutTimerC;
 
 	components SerialPrintfC;
     components SerialStartC;
@@ -24,4 +25,5 @@ implementation {
   	App.PacketAcknowledgements -> ActiveMessageC;
     App.Packet -> AMSenderC;
     App.MessageTask -> SendMessageTaskC;
+    App.TimeOutTimer -> TimeOutTimerC;
 }

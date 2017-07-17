@@ -3,6 +3,7 @@
 
 #define NNODE 8
 #define PAN_ID TOS_NODE_ID
+#define RESEND_PUB 20
 
 module PANCoordinatorC {
 	uses {
@@ -13,12 +14,15 @@ module PANCoordinatorC {
         interface PacketAcknowledgements;
         interface Packet;
         interface MessageTask;
+        interface Timer<TMilli> as TimeOutTimer;
 	}
 }	implementation {
     bool connected_nodes[NNODE];
     bool sub_nodes_tmp[NNODE];
     bool sub_nodes_hum[NNODE];
     bool sub_nodes_lum[NNODE];
+    bool publish_list[NNODE];
+    bool ready_to_receive_publish = TRUE;
 
 	message_t global_packet;
     //my_msg_t * pckt;
@@ -35,6 +39,7 @@ module PANCoordinatorC {
     void handle_suback(uint16_t dst, uint8_t qos);
     void handle_connack(uint16_t dst, uint8_t qos);
     void handle_puback(uint16_t dst, uint8_t qos);
+    task void publishTask();
 
 	//task void sendConnackTask();
     //task void sendSubAckTask();
@@ -101,29 +106,30 @@ module PANCoordinatorC {
             call MessageTask.postTask(rx_msg->nodeID, SUBACK, 0, PAN_ID, 0, 0);
 
         }else if (rx_msg->msg_type == PUBLISH){
-            //topic_rx = rx_msg->topic;
-            //payload_rx = rx_msg->payload;
-            //node_ids = rx_msg->nodeID;
-            //post forwardPublishTask();
-            call MessageTask.postTask(rx_msg->nodeID, PUBACK, 0, PAN_ID, 0, 0);
-            switch(rx_msg->topic)
-            {
-            case TEMPERATURE_ID:
-                printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Temperature, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
-                handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
-                break;
-            case HUMIDITY_ID:
-                printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Humidity, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
-                //handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
-                break;
-            case LUMINOSITY_ID:
-                printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Luminosity, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
-                //handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
-                break;
-            default:
-                printf("[PAN Coordinator] Received from Node %u an unkonwn topic: %u\n",rx_msg->nodeID,rx_msg->topic);
-                break;
-            }
+            if(ready_to_receive_publish){
+                ready_to_receive_publish = FALSE;
+                call MessageTask.postTask(rx_msg->nodeID, PUBACK, 0, PAN_ID, 0, 0);
+                switch(rx_msg->topic)
+                {
+                case TEMPERATURE_ID:
+                    printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Temperature, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
+                    handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
+                    break;
+                case HUMIDITY_ID:
+                    printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Humidity, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
+                    //handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
+                    break;
+                case LUMINOSITY_ID:
+                    printf("[PAN Coordinator] Received PUBLISH message from %u, Topic:%u, Luminosity, Data: %u\n", rx_msg->nodeID,rx_msg->topic,rx_msg->payload);
+                    //handle_publish(rx_msg->nodeID, rx_msg->topic,rx_msg->qos,rx_msg->payload);
+                    break;
+                default:
+                    printf("[PAN Coordinator] Received from Node %u an unkonwn topic: %u\n",rx_msg->nodeID,rx_msg->topic);
+                    break;
+                }
+            }else
+                printf("[PAN Coordinator] Discarded Publish received from Node %u, waiting for complete forwarding\n", rx_msg->nodeID);
+
         }
         return buf;
     }
@@ -236,28 +242,30 @@ module PANCoordinatorC {
 
    void handle_publish(uint16_t node_address, uint8_t topic, uint8_t qos, uint16_t payload) {
         uint16_t index;
-        for(index = 0; index < NNODE; index++)
+        my_msg_t* tx_pub_pckt;
+        tx_pub_pckt = call Packet.getPayload(&publish_packet,sizeof(my_msg_t));
+        tx_pub_pckt->msg_type = PUBLISH;
+        tx_pub_pckt->qos = qos;
+        tx_pub_pckt->nodeID = node_address;
+        tx_pub_pckt->topic = topic;
+        tx_pub_pckt->payload = payload;
+        for(index = 0; index < NNODE; index++){
             if(sub_nodes_tmp[index] && index+1 != node_address){
-                my_msg_t* pckt;
-                node_address = index + 1;
+                publish_list[index] = TRUE;
+                
+                /*node_address = index + 1;
                 //call MessageTask.postTask(index+1,PUBLISH, 0, PAN_ID, rx_msg->topic, rx_msg->payload);
                 printf("[PAN Coordinator] Publish forward to node :%u\n",node_address);
-                pckt = call Packet.getPayload(&publish_packet,sizeof(my_msg_t));
-                pckt->msg_type = PUBLISH;
-                pckt->qos = qos;
-                pckt->nodeID = node_address;
-                pckt->topic = topic;
-                pckt->payload = payload;
+
                 if( call AMSend.send(node_address, &publish_packet, sizeof(my_msg_t)) == SUCCESS)
                 {
                     printf("[PAN Coordinator] Sent publish to Node %u\n", node_address);
                 }else
-                    printf("[PAN Coordinator] Fail to send publish to node %u\n", node_address);
+                    printf("[PAN Coordinator] Fail to send publish to node %u\n", node_address);*/
             }
-
-
+        }
+        call TimeOutTimer.startPeriodic(RESEND_PUB);
     }
-
  /*   task void sendSubAckTask(){
 
         printf("[PAN Coordinator] Subscribe received from Node %u to topic %u\n",node_ids, topic_rx);
@@ -288,12 +296,39 @@ module PANCoordinatorC {
  */   
     event void AMSend.sendDone(message_t* buf,error_t err) {
         //printf("DEBUG\n");
-        if((&packet == buf || &connack_packet == buf || &suback_packet == buf)  && err == SUCCESS );
-            //printf("[PAN Coordinator] Packet Sent\n");
+        if((&packet == buf || &connack_packet == buf || &suback_packet == buf || &puback_packet == buf || &publish_packet == buf)  && err == SUCCESS ){
+            printf("[PAN Coordinator] Packet Sent\n");
+        }
         else if ( err != SUCCESS)
             printf("[PAN Coordinator] Packet NOT sent, failed\n");
     
         if ( call PacketAcknowledgements.wasAcked( buf ) );
           //printf("[PAN Coordinator] Packet acked!\n");
+    }
+    event void TimeOutTimer.fired(){
+        post publishTask();
+    }
+
+    task void publishTask(){
+        uint16_t index;
+        for(index = 0; index < NNODE; index++){
+            if(publish_list[index] == TRUE){
+                printf("[PAN Coordinator] Publish forward to node :%u\n",index + 1);
+
+                if( call AMSend.send(index + 1, &publish_packet, sizeof(my_msg_t)) == SUCCESS)
+                {
+                    printf("[PAN Coordinator] Sent publish to Node %u\n", index + 1);
+                    publish_list[index] = FALSE;
+                }else
+                    printf("[PAN Coordinator] Fail to send publish to node %u\n", index + 1);
+            break;
+            }
+
+        }
+        if(index == NNODE){
+            printf("[PAN Coordinator] Finished to forward publish message to subcribed nodes\n");
+            ready_to_receive_publish = TRUE;
+            call TimeOutTimer.stop();
+        }
     }
 }
