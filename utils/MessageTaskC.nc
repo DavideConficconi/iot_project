@@ -1,3 +1,4 @@
+/**** Module in order to pass parameters between functons and execute them asynchronously*****/
 module MessageTaskC
 {
 	provides interface MessageTask;

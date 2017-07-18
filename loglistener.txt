@@ -1,0 +1,1369 @@
+00:04.279	ID:1	[NODE 1] Started. Connecting to PAN Coordinator
+00:04.282	ID:1	[NODE 1] Sent Connect to PAN Coordinator
+00:04.292	ID:4	[NODE 4] Started. Connecting to PAN Coordinator
+00:04.295	ID:4	[NODE 4] Sent Connect to PAN Coordinator
+00:04.509	ID:5	[NODE 5] Started. Connecting to PAN Coordinator
+00:04.512	ID:5	[NODE 5] Sent Connect to PAN Coordinator
+00:04.584	ID:2	[NODE 2] Started. Connecting to PAN Coordinator
+00:04.587	ID:2	[NODE 2] Sent Connect to PAN Coordinator
+00:04.599	ID:3	[NODE 3] Started. Connecting to PAN Coordinator
+00:04.602	ID:3	[NODE 3] Sent Connect to PAN Coordinator
+00:04.799	ID:8	[NODE 8] Started. Connecting to PAN Coordinator
+00:04.803	ID:8	[NODE 8] Sent Connect to PAN Coordinator
+00:04.819	ID:9	[PAN Coordinator] Started! at address: 9
+00:04.941	ID:7	[NODE 7] Started. Connecting to PAN Coordinator
+00:04.944	ID:7	[NODE 7] Sent Connect to PAN Coordinator
+00:04.957	ID:9	[PAN Coordinator] CONNECT received from node :7, MY ID: 9
+00:04.958	ID:6	[NODE 6] Started. Connecting to PAN Coordinator
+00:04.960	ID:9	[PAN Coordinator] Sent CONNACK to node 7
+00:04.961	ID:6	[NODE 6] Sent Connect to PAN Coordinator
+00:04.966	ID:9	[PAN Coordinator] CONNECT received from node :6, MY ID: 9
+00:04.968	ID:7	[NODE 7] Connack received by PAN Coordinator address 9
+00:04.969	ID:9	[PAN Coordinator] Fail to send CONNACK to node 6
+00:04.972	ID:7	[NODE 7] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 0
+00:04.985	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 7 to Topic 1 with QoS:0
+00:04.989	ID:9	[PAN Coordinator] Sent SUBACK to node 7 for Topic:1
+00:05.000	ID:7	[NODE 7] Suback received by PAN Coordinator for Topic 1
+00:05.005	ID:7	[NODE 7] Sent Subscribe to PAN Coordinator to Topic: 0, QoS: 1
+00:05.017	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 7 to Topic 0 with QoS:1
+00:05.020	ID:9	[PAN Coordinator] Sent SUBACK to node 7 for Topic:0
+00:05.033	ID:7	[NODE 7] Suback received by PAN Coordinator for Topic 0
+00:07.213	ID:1	[NODE 1] Connack not received. Try again
+00:07.217	ID:1	[NODE 1] Sent Connect to PAN Coordinator
+00:07.224	ID:9	[PAN Coordinator] CONNECT received from node :1, MY ID: 9
+00:07.227	ID:9	[PAN Coordinator] Sent CONNACK to node 1
+00:07.235	ID:1	[NODE 1] Connack received by PAN Coordinator address 9
+00:07.240	ID:1	[NODE 1] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 0
+00:07.243	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 1 to Topic 1 with QoS:0
+00:07.247	ID:9	[PAN Coordinator] Sent SUBACK to node 1 for Topic:1
+00:07.255	ID:1	[NODE 1] Suback received by PAN Coordinator for Topic 1
+00:07.261	ID:1	[NODE 1] Sent Subscribe to PAN Coordinator to Topic: 0, QoS: 1
+00:07.264	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 1 to Topic 0 with QoS:1
+00:07.268	ID:9	[PAN Coordinator] Sent SUBACK to node 1 for Topic:0
+00:07.275	ID:1	[NODE 1] Suback received by PAN Coordinator for Topic 0
+00:08.495	ID:2	[NODE 2] Connack not received. Try again
+00:08.499	ID:2	[NODE 2] Sent Connect to PAN Coordinator
+00:08.502	ID:9	[PAN Coordinator] CONNECT received from node :2, MY ID: 9
+00:08.505	ID:9	[PAN Coordinator] Sent CONNACK to node 2
+00:08.514	ID:2	[NODE 2] Connack received by PAN Coordinator address 9
+00:08.519	ID:2	[NODE 2] Sent Subscribe to PAN Coordinator to Topic: 2, QoS: 1
+00:08.526	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 2 to Topic 2 with QoS:1
+00:08.529	ID:9	[PAN Coordinator] Sent SUBACK to node 2 for Topic:2
+00:08.538	ID:2	[NODE 2] Suback received by PAN Coordinator for Topic 2
+00:08.543	ID:2	[NODE 2] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 1
+00:08.547	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 2 to Topic 1 with QoS:1
+00:08.550	ID:9	[PAN Coordinator] Sent SUBACK to node 2 for Topic:1
+00:08.562	ID:2	[NODE 2] Suback received by PAN Coordinator for Topic 1
+00:09.486	ID:3	[NODE 3] Connack not received. Try again
+00:09.489	ID:3	[NODE 3] Sent Connect to PAN Coordinator
+00:09.500	ID:9	[PAN Coordinator] CONNECT received from node :3, MY ID: 9
+00:09.503	ID:9	[PAN Coordinator] Sent CONNACK to node 3
+00:09.511	ID:3	[NODE 3] Connack received by PAN Coordinator address 9
+00:09.517	ID:3	[NODE 3] Sent Subscribe to PAN Coordinator to Topic: 0, QoS: 1
+00:09.521	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 3 to Topic 0 with QoS:1
+00:09.525	ID:9	[PAN Coordinator] Sent SUBACK to node 3 for Topic:0
+00:09.528	ID:3	[NODE 3] Suback received by PAN Coordinator for Topic 0
+00:09.534	ID:3	[NODE 3] Sent Subscribe to PAN Coordinator to Topic: 2, QoS: 0
+00:09.538	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 3 to Topic 2 with QoS:0
+00:09.542	ID:9	[PAN Coordinator] Sent SUBACK to node 3 for Topic:2
+00:09.549	ID:3	[NODE 3] Suback received by PAN Coordinator for Topic 2
+00:10.155	ID:4	[NODE 4] Connack not received. Try again
+00:10.159	ID:4	[NODE 4] Sent Connect to PAN Coordinator
+00:10.171	ID:9	[PAN Coordinator] CONNECT received from node :4, MY ID: 9
+00:10.175	ID:9	[PAN Coordinator] Sent CONNACK to node 4
+00:10.180	ID:4	[NODE 4] Connack received by PAN Coordinator address 9
+00:10.184	ID:4	[NODE 4] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 1
+00:10.192	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 4 to Topic 1 with QoS:1
+00:10.196	ID:9	[PAN Coordinator] Sent SUBACK to node 4 for Topic:1
+00:10.204	ID:4	[NODE 4] Suback received by PAN Coordinator for Topic 1
+00:10.209	ID:4	[NODE 4] Sent Subscribe to PAN Coordinator to Topic: 0, QoS: 0
+00:10.214	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 4 to Topic 0 with QoS:0
+00:10.218	ID:9	[PAN Coordinator] Sent SUBACK to node 4 for Topic:0
+00:10.223	ID:4	[NODE 4] Suback received by PAN Coordinator for Topic 0
+00:11.349	ID:5	[NODE 5] Connack not received. Try again
+00:11.352	ID:5	[NODE 5] Sent Connect to PAN Coordinator
+00:11.362	ID:9	[PAN Coordinator] CONNECT received from node :5, MY ID: 9
+00:11.365	ID:9	[PAN Coordinator] Sent CONNACK to node 5
+00:11.375	ID:5	[NODE 5] Connack received by PAN Coordinator address 9
+00:11.380	ID:5	[NODE 5] Sent Subscribe to PAN Coordinator to Topic: 2, QoS: 0
+00:11.391	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 5 to Topic 2 with QoS:0
+00:11.395	ID:9	[PAN Coordinator] Sent SUBACK to node 5 for Topic:2
+00:11.404	ID:5	[NODE 5] Suback received by PAN Coordinator for Topic 2
+00:11.409	ID:5	[NODE 5] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 0
+00:11.414	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 5 to Topic 1 with QoS:0
+00:11.418	ID:9	[PAN Coordinator] Sent SUBACK to node 5 for Topic:1
+00:11.426	ID:5	[NODE 5] Suback received by PAN Coordinator for Topic 1
+00:12.775	ID:6	[NODE 6] Connack not received. Try again
+00:12.779	ID:6	[NODE 6] Sent Connect to PAN Coordinator
+00:12.785	ID:9	[PAN Coordinator] CONNECT received from node :6, MY ID: 9
+00:12.788	ID:9	[PAN Coordinator] Sent CONNACK to node 6
+00:12.796	ID:6	[NODE 6] Connack received by PAN Coordinator address 9
+00:12.800	ID:6	[NODE 6] Sent Subscribe to PAN Coordinator to Topic: 0, QoS: 0
+00:12.809	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 6 to Topic 0 with QoS:0
+00:12.812	ID:9	[PAN Coordinator] Sent SUBACK to node 6 for Topic:0
+00:12.822	ID:6	[NODE 6] Suback received by PAN Coordinator for Topic 0
+00:12.827	ID:6	[NODE 6] Sent Subscribe to PAN Coordinator to Topic: 2, QoS: 1
+00:12.833	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 6 to Topic 2 with QoS:1
+00:12.837	ID:9	[PAN Coordinator] Sent SUBACK to node 6 for Topic:2
+00:12.849	ID:6	[NODE 6] Suback received by PAN Coordinator for Topic 2
+00:14.570	ID:8	[NODE 8] Connack not received. Try again
+00:14.573	ID:8	[NODE 8] Sent Connect to PAN Coordinator
+00:14.579	ID:9	[PAN Coordinator] CONNECT received from node :8, MY ID: 9
+00:14.582	ID:9	[PAN Coordinator] Sent CONNACK to node 8
+00:14.588	ID:8	[NODE 8] Connack received by PAN Coordinator address 9
+00:14.594	ID:8	[NODE 8] Sent Subscribe to PAN Coordinator to Topic: 2, QoS: 1
+00:14.598	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 8 to Topic 2 with QoS:1
+00:14.603	ID:9	[PAN Coordinator] Sent SUBACK to node 8 for Topic:2
+00:14.607	ID:8	[NODE 8] Suback received by PAN Coordinator for Topic 2
+00:14.611	ID:8	[NODE 8] Sent Subscribe to PAN Coordinator to Topic: 1, QoS: 1
+00:14.618	ID:9	[PAN Coordinator] SUBSCRIBE received from Node 8 to Topic 1 with QoS:1
+00:14.623	ID:9	[PAN Coordinator] Sent SUBACK to node 8 for Topic:1
+00:14.625	ID:8	[NODE 8] Suback received by PAN Coordinator for Topic 1
+00:15.689	ID:7	[NODE 7]New data available from Topic:1; Humidity: 24915
+00:15.695	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 24915
+00:15.701	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 24915
+00:15.722	ID:9	[PAN Coordinator] Publish forward to node :1
+00:15.725	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:15.733	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.741	ID:9	[PAN Coordinator] Publish forward to node :2
+00:15.744	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:15.755	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.758	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:15.761	ID:9	[PAN Coordinator] Publish forward to node :2
+00:15.764	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:15.769	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:15.775	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.778	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:15.781	ID:9	[PAN Coordinator] Publish forward to node :4
+00:15.785	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:15.788	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:15.789	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.792	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:15.801	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:15.803	ID:9	[PAN Coordinator] Publish forward to node :5
+00:15.806	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:15.815	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.819	ID:9	[PAN Coordinator] Publish forward to node :8
+00:15.822	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:15.830	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.833	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:15.840	ID:9	[PAN Coordinator] Publish forward to node :8
+00:15.843	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:15.846	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:15.853	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 24915
+00:15.856	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:15.860	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:15.863	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:26.300	ID:4	[NODE 4]New data available from Topic:1; Humidity: 17897
+00:26.306	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 17897
+00:26.318	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 1, Topic:1, Data: 17897
+00:26.321	ID:9	[PAN Coordinator] Sent PUBACK to Node 4
+00:26.327	ID:4	[NODE 4] Puback received by PAN Coordinator
+00:26.343	ID:9	[PAN Coordinator] Publish forward to node :1
+00:26.346	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:26.352	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.361	ID:7	[NODE 7]New data available from Topic:1; Humidity: 54849
+00:26.362	ID:9	[PAN Coordinator] Publish forward to node :2
+00:26.366	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:26.367	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 54849
+00:26.372	ID:9	[PAN Coordinator] Discarded Publish received from Node 7, waiting for complete forwarding
+00:26.373	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.376	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:26.383	ID:9	[PAN Coordinator] Publish forward to node :2
+00:26.386	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:26.389	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:26.400	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.401	ID:9	[PAN Coordinator] Publish forward to node :5
+00:26.403	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:26.404	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:26.412	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.413	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:26.421	ID:9	[PAN Coordinator] Publish forward to node :7
+00:26.424	ID:9	[PAN Coordinator] Sent publish to Node 7
+00:26.431	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.440	ID:9	[PAN Coordinator] Publish forward to node :8
+00:26.443	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:26.451	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.454	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:26.461	ID:9	[PAN Coordinator] Publish forward to node :8
+00:26.464	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:26.467	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:26.474	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 17897
+00:26.477	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:26.481	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:26.484	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:28.758	ID:1	[NODE 1]New data available from Topic:1; Humidity: 28421
+00:28.763	ID:1	[NODE 1] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 28421
+00:28.775	ID:9	[PAN Coordinator] Received PUBLISH message from 1, Qos: 0, Topic:1, Data: 28421
+00:28.797	ID:9	[PAN Coordinator] Publish forward to node :2
+00:28.801	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:28.806	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.809	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:28.813	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:28.816	ID:9	[PAN Coordinator] Publish forward to node :4
+00:28.819	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:28.828	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.831	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:28.837	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:28.839	ID:9	[PAN Coordinator] Publish forward to node :5
+00:28.842	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:28.851	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.855	ID:9	[PAN Coordinator] Publish forward to node :7
+00:28.859	ID:9	[PAN Coordinator] Sent publish to Node 7
+00:28.864	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.875	ID:9	[PAN Coordinator] Publish forward to node :8
+00:28.878	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:28.885	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.889	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:28.894	ID:9	[PAN Coordinator] Publish forward to node :8
+00:28.899	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:28.902	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:28.904	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 28421
+00:28.908	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:28.915	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:28.920	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:37.033	ID:7	[NODE 7]New data available from Topic:1; Humidity: 20469
+00:37.038	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 20469
+00:37.049	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 20469
+00:37.070	ID:9	[PAN Coordinator] Publish forward to node :1
+00:37.074	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:37.079	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.090	ID:9	[PAN Coordinator] Publish forward to node :2
+00:37.093	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:37.103	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.107	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:37.109	ID:9	[PAN Coordinator] Publish forward to node :2
+00:37.112	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:37.116	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:37.125	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.128	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:37.129	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.132	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.148	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.151	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.168	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.171	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.187	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.191	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.207	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.210	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.227	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.230	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.246	ID:9	[PAN Coordinator] Publish forward to node :4
+00:37.249	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:37.258	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.262	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:37.267	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:37.269	ID:9	[PAN Coordinator] Publish forward to node :5
+00:37.272	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:37.284	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.285	ID:9	[PAN Coordinator] Publish forward to node :8
+00:37.288	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:37.297	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 20469
+00:37.300	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:37.304	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:37.307	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:42.378	ID:4	[NODE 4]New data available from Topic:1; Humidity: 5509
+00:42.384	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 5509
+00:42.389	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 1, Topic:1, Data: 5509
+00:42.392	ID:9	[PAN Coordinator] Sent PUBACK to Node 4
+00:42.400	ID:4	[NODE 4] Puback received by PAN Coordinator
+00:42.414	ID:9	[PAN Coordinator] Publish forward to node :1
+00:42.417	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:42.428	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.434	ID:9	[PAN Coordinator] Publish forward to node :2
+00:42.437	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:42.450	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.453	ID:9	[PAN Coordinator] Publish forward to node :2
+00:42.454	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:42.456	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:42.462	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:42.465	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.468	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:42.473	ID:9	[PAN Coordinator] Publish forward to node :5
+00:42.476	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:42.481	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:42.484	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.492	ID:9	[PAN Coordinator] Publish forward to node :7
+00:42.495	ID:9	[PAN Coordinator] Sent publish to Node 7
+00:42.509	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.512	ID:9	[PAN Coordinator] Publish forward to node :8
+00:42.515	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:42.525	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.528	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:42.531	ID:9	[PAN Coordinator] Publish forward to node :8
+00:42.536	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:42.539	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:42.541	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 5509
+00:42.544	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:42.551	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:42.556	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:44.827	ID:8	[NODE 8]New data available from Topic:2; Luminosity: 47858
+00:44.833	ID:8	[NODE 8] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 47858
+00:44.845	ID:9	[PAN Coordinator] Received PUBLISH message from 8, Qos: 1, Topic:2, Data: 47858
+00:44.849	ID:9	[PAN Coordinator] Sent PUBACK to Node 8
+00:44.852	ID:8	[NODE 8] Puback received by PAN Coordinator
+00:44.870	ID:9	[PAN Coordinator] Publish forward to node :2
+00:44.874	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:44.878	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.881	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:44.890	ID:9	[PAN Coordinator] Publish forward to node :2
+00:44.893	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:44.897	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:44.901	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.904	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:44.909	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:44.911	ID:9	[PAN Coordinator] Publish forward to node :3
+00:44.914	ID:9	[PAN Coordinator] Sent publish to Node 3
+00:44.923	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.929	ID:9	[PAN Coordinator] Publish forward to node :5
+00:44.932	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:44.938	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.948	ID:9	[PAN Coordinator] Publish forward to node :6
+00:44.951	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:44.963	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.966	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:44.968	ID:9	[PAN Coordinator] Publish forward to node :6
+00:44.971	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:44.978	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:44.982	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 47858
+00:44.986	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:44.988	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:44.995	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:47.031	ID:5	[NODE 5]New data available from Topic:2; Luminosity: 19727
+00:47.037	ID:5	[NODE 5] Sent Publish to PAN Coordinator, QoS:0, Topic:2 , Data: 19727
+00:47.049	ID:9	[PAN Coordinator] Received PUBLISH message from 5, Qos: 0, Topic:2, Data: 19727
+00:47.070	ID:9	[PAN Coordinator] Publish forward to node :2
+00:47.073	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:47.086	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.089	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:47.090	ID:9	[PAN Coordinator] Publish forward to node :2
+00:47.093	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:47.101	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.102	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:47.105	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:47.110	ID:9	[PAN Coordinator] Publish forward to node :3
+00:47.114	ID:9	[PAN Coordinator] Sent publish to Node 3
+00:47.116	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:47.123	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.129	ID:9	[PAN Coordinator] Publish forward to node :6
+00:47.132	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:47.144	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.147	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:47.148	ID:9	[PAN Coordinator] Publish forward to node :6
+00:47.152	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:47.156	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:47.164	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.168	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:47.168	ID:9	[PAN Coordinator] Publish forward to node :8
+00:47.172	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:47.176	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 19727
+00:47.178	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:47.179	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:47.187	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:47.189	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:47.705	ID:7	[NODE 7]New data available from Topic:1; Humidity: 8815
+00:47.710	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 8815
+00:47.718	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 8815
+00:47.739	ID:9	[PAN Coordinator] Publish forward to node :1
+00:47.742	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:47.750	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.759	ID:9	[PAN Coordinator] Publish forward to node :2
+00:47.762	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:47.772	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.775	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:47.779	ID:9	[PAN Coordinator] Publish forward to node :2
+00:47.782	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:47.785	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:47.792	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.795	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:47.798	ID:9	[PAN Coordinator] Publish forward to node :4
+00:47.801	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:47.806	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:47.812	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.815	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:47.817	ID:9	[PAN Coordinator] Publish forward to node :4
+00:47.820	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:47.825	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:47.834	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.837	ID:9	[PAN Coordinator] Publish forward to node :5
+00:47.837	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:47.840	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:47.847	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:47.850	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.856	ID:9	[PAN Coordinator] Publish forward to node :8
+00:47.859	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:47.868	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.871	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:47.877	ID:9	[PAN Coordinator] Publish forward to node :8
+00:47.880	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:47.884	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:47.888	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 8815
+00:47.891	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:47.896	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:47.902	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:49.572	ID:2	[NODE 2]New data available from Topic:2; Luminosity: 56316
+00:49.577	ID:2	[NODE 2] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 56316
+00:49.584	ID:9	[PAN Coordinator] Received PUBLISH message from 2, Qos: 1, Topic:2, Data: 56316
+00:49.587	ID:9	[PAN Coordinator] Sent PUBACK to Node 2
+00:49.597	ID:2	[NODE 2] Puback received by PAN Coordinator
+00:49.608	ID:9	[PAN Coordinator] Publish forward to node :3
+00:49.611	ID:9	[PAN Coordinator] Sent publish to Node 3
+00:49.622	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 56316
+00:49.628	ID:9	[PAN Coordinator] Publish forward to node :5
+00:49.631	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:49.640	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 56316
+00:49.647	ID:9	[PAN Coordinator] Publish forward to node :6
+00:49.650	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:49.664	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 56316
+00:49.667	ID:9	[PAN Coordinator] Publish forward to node :6
+00:49.667	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:49.670	ID:9	[PAN Coordinator] Sent publish to Node 6
+00:49.679	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:49.682	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 56316
+00:49.685	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+00:49.686	ID:9	[PAN Coordinator] Publish forward to node :8
+00:49.690	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:49.694	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 56316
+00:49.697	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+00:49.697	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:49.703	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:49.707	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:50.242	ID:1	[NODE 1]New data available from Topic:1; Humidity: 7600
+00:50.247	ID:1	[NODE 1] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 7600
+00:50.255	ID:9	[PAN Coordinator] Received PUBLISH message from 1, Qos: 0, Topic:1, Data: 7600
+00:50.276	ID:9	[PAN Coordinator] Publish forward to node :2
+00:50.279	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:50.287	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.290	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:50.296	ID:9	[PAN Coordinator] Publish forward to node :2
+00:50.300	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:50.303	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:50.312	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.315	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:50.315	ID:9	[PAN Coordinator] Publish forward to node :4
+00:50.318	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:50.335	ID:9	[PAN Coordinator] Publish forward to node :4
+00:50.338	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:50.347	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.351	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:50.356	ID:9	[PAN Coordinator] Publish forward to node :4
+00:50.359	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:50.361	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:50.369	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.372	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:50.374	ID:9	[PAN Coordinator] Publish forward to node :5
+00:50.377	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:50.381	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:50.389	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.394	ID:9	[PAN Coordinator] Publish forward to node :7
+00:50.397	ID:9	[PAN Coordinator] Sent publish to Node 7
+00:50.404	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.413	ID:9	[PAN Coordinator] Publish forward to node :8
+00:50.417	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:50.421	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 7600
+00:50.425	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:50.430	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:50.433	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:58.377	ID:7	[NODE 7]New data available from Topic:1; Humidity: 58028
+00:58.382	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 58028
+00:58.390	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 58028
+00:58.412	ID:9	[PAN Coordinator] Publish forward to node :1
+00:58.415	ID:9	[PAN Coordinator] Sent publish to Node 1
+00:58.425	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.432	ID:9	[PAN Coordinator] Publish forward to node :2
+00:58.435	ID:9	[PAN Coordinator] Sent publish to Node 2
+00:58.444	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.448	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+00:58.451	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+00:58.453	ID:9	[PAN Coordinator] Publish forward to node :4
+00:58.456	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:58.457	ID:4	[NODE 4]New data available from Topic:1; Humidity: 5221
+00:58.463	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 5221
+00:58.467	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.468	ID:9	[PAN Coordinator] Discarded Publish received from Node 4, waiting for complete forwarding
+00:58.471	ID:9	[PAN Coordinator] Publish forward to node :4
+00:58.471	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:58.475	ID:9	[PAN Coordinator] Sent publish to Node 4
+00:58.478	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:58.482	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.485	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+00:58.491	ID:9	[PAN Coordinator] Publish forward to node :5
+00:58.494	ID:9	[PAN Coordinator] Sent publish to Node 5
+00:58.498	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+00:58.502	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.510	ID:9	[PAN Coordinator] Publish forward to node :8
+00:58.513	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:58.520	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.523	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:58.529	ID:9	[PAN Coordinator] Publish forward to node :8
+00:58.533	ID:9	[PAN Coordinator] Sent publish to Node 8
+00:58.537	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+00:58.541	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 58028
+00:58.545	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+00:58.549	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+00:58.555	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:04.324	ID:4	[NODE 4] Puback not received. Try again
+01:04.330	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 5221
+01:04.336	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 0, Topic:1, Data: 5221
+01:04.357	ID:9	[PAN Coordinator] Publish forward to node :1
+01:04.360	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:04.372	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 5221
+01:04.377	ID:9	[PAN Coordinator] Publish forward to node :2
+01:04.381	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:04.385	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 5221
+01:04.388	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:04.398	ID:9	[PAN Coordinator] Publish forward to node :2
+01:04.401	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:04.403	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:04.412	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 5221
+01:04.416	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:04.416	ID:9	[PAN Coordinator] Publish forward to node :5
+01:04.419	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:04.436	ID:9	[PAN Coordinator] Publish forward to node :7
+01:04.439	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:04.448	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 5221
+01:04.455	ID:9	[PAN Coordinator] Publish forward to node :8
+01:04.458	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:04.466	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 5221
+01:04.470	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:04.474	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:04.477	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:07.981	ID:6	[NODE 6]New data available from Topic:0; Temperature: 11306
+01:07.987	ID:6	[NODE 6] Sent Publish to PAN Coordinator, QoS:0, Topic:0 , Data: 11306
+01:07.993	ID:9	[PAN Coordinator] Received PUBLISH message from 6, Qos: 0, Topic:0, Data: 11306
+01:08.015	ID:9	[PAN Coordinator] Publish forward to node :1
+01:08.018	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:08.024	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 0, Data: 11306
+01:08.028	ID:1	[NODE 1] Sent PUBACK to PAN Coordinator
+01:08.031	ID:9	[PAN Coordinator] Received PUBACK message from Node 1
+01:08.034	ID:9	[PAN Coordinator] Publish forward to node :3
+01:08.037	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:08.044	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 0, Data: 11306
+01:08.047	ID:3	[NODE 3] Sent PUBACK to PAN Coordinator
+01:08.054	ID:9	[PAN Coordinator] Received PUBACK message from Node 3
+01:08.056	ID:9	[PAN Coordinator] Publish forward to node :4
+01:08.059	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:08.068	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 0, Data: 11306
+01:08.073	ID:9	[PAN Coordinator] Publish forward to node :7
+01:08.077	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:08.081	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 11306
+01:08.084	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+01:08.090	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+01:08.093	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:09.049	ID:7	[NODE 7]New data available from Topic:1; Humidity: 42392
+01:09.054	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 42392
+01:09.064	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 42392
+01:09.086	ID:9	[PAN Coordinator] Publish forward to node :1
+01:09.089	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:09.096	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.105	ID:9	[PAN Coordinator] Publish forward to node :2
+01:09.108	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:09.119	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.122	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:09.126	ID:9	[PAN Coordinator] Publish forward to node :2
+01:09.129	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:09.132	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:09.142	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.144	ID:9	[PAN Coordinator] Publish forward to node :4
+01:09.145	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:09.148	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:09.164	ID:9	[PAN Coordinator] Publish forward to node :4
+01:09.167	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:09.174	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.177	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:09.185	ID:9	[PAN Coordinator] Publish forward to node :4
+01:09.188	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:09.191	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:09.196	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.199	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:09.203	ID:9	[PAN Coordinator] Publish forward to node :5
+01:09.206	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:09.210	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:09.220	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.223	ID:9	[PAN Coordinator] Publish forward to node :8
+01:09.226	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:09.236	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.240	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:09.242	ID:9	[PAN Coordinator] Publish forward to node :8
+01:09.246	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:09.250	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:09.255	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 42392
+01:09.258	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:09.262	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:09.269	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:10.093	ID:3	[NODE 3]New data available from Topic:0; Temperature: 27424
+01:10.099	ID:3	[NODE 3] Sent Publish to PAN Coordinator, QoS:1, Topic:0 , Data: 27424
+01:10.102	ID:9	[PAN Coordinator] Received PUBLISH message from 3, Qos: 1, Topic:0, Data: 27424
+01:10.105	ID:9	[PAN Coordinator] Sent PUBACK to Node 3
+01:10.114	ID:3	[NODE 3] Puback received by PAN Coordinator
+01:10.126	ID:9	[PAN Coordinator] Publish forward to node :1
+01:10.129	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:10.137	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 0, Data: 27424
+01:10.141	ID:1	[NODE 1] Sent PUBACK to PAN Coordinator
+01:10.145	ID:9	[PAN Coordinator] Received PUBACK message from Node 1
+01:10.147	ID:9	[PAN Coordinator] Publish forward to node :4
+01:10.151	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:10.156	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 0, Data: 27424
+01:10.165	ID:9	[PAN Coordinator] Publish forward to node :6
+01:10.168	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:10.174	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 0, Data: 27424
+01:10.185	ID:9	[PAN Coordinator] Publish forward to node :7
+01:10.188	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:10.200	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 27424
+01:10.203	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+01:10.204	ID:9	[PAN Coordinator] Publish forward to node :7
+01:10.207	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:10.214	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+01:10.217	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 27424
+01:10.221	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+01:10.224	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+01:10.227	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:11.726	ID:1	[NODE 1]New data available from Topic:1; Humidity: 12592
+01:11.732	ID:1	[NODE 1] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 12592
+01:11.741	ID:9	[PAN Coordinator] Received PUBLISH message from 1, Qos: 0, Topic:1, Data: 12592
+01:11.763	ID:9	[PAN Coordinator] Publish forward to node :2
+01:11.766	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:11.775	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.778	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:11.782	ID:9	[PAN Coordinator] Publish forward to node :2
+01:11.787	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:11.790	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:11.793	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.796	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:11.803	ID:9	[PAN Coordinator] Publish forward to node :4
+01:11.806	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:11.809	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:11.813	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.816	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:11.822	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:11.825	ID:9	[PAN Coordinator] Publish forward to node :5
+01:11.828	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:11.841	ID:9	[PAN Coordinator] Publish forward to node :7
+01:11.841	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.844	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:11.857	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.860	ID:9	[PAN Coordinator] Publish forward to node :8
+01:11.864	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:11.869	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.872	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:11.880	ID:9	[PAN Coordinator] Publish forward to node :8
+01:11.884	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:11.888	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:11.891	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 12592
+01:11.894	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:11.899	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:11.902	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:14.535	ID:4	[NODE 4]New data available from Topic:1; Humidity: 46877
+01:14.540	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 46877
+01:14.552	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 1, Topic:1, Data: 46877
+01:14.555	ID:9	[PAN Coordinator] Sent PUBACK to Node 4
+01:14.566	ID:4	[NODE 4] Puback received by PAN Coordinator
+01:14.576	ID:9	[PAN Coordinator] Publish forward to node :1
+01:14.580	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:14.584	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.596	ID:9	[PAN Coordinator] Publish forward to node :2
+01:14.599	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:14.607	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.610	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:14.615	ID:9	[PAN Coordinator] Publish forward to node :2
+01:14.620	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:14.623	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:14.625	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.628	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:14.636	ID:9	[PAN Coordinator] Publish forward to node :5
+01:14.639	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:14.642	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:14.649	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.654	ID:9	[PAN Coordinator] Publish forward to node :7
+01:14.657	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:14.668	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.674	ID:9	[PAN Coordinator] Publish forward to node :8
+01:14.677	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:14.684	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 46877
+01:14.688	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:14.691	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:14.694	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:15.031	ID:8	[NODE 8]New data available from Topic:2; Luminosity: 13259
+01:15.036	ID:8	[NODE 8] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 13259
+01:15.039	ID:9	[PAN Coordinator] Received PUBLISH message from 8, Qos: 1, Topic:2, Data: 13259
+01:15.043	ID:9	[PAN Coordinator] Sent PUBACK to Node 8
+01:15.049	ID:8	[NODE 8] Puback received by PAN Coordinator
+01:15.064	ID:9	[PAN Coordinator] Publish forward to node :2
+01:15.068	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:15.073	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.076	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:15.085	ID:9	[PAN Coordinator] Publish forward to node :2
+01:15.088	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:15.091	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:15.098	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.102	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:15.105	ID:9	[PAN Coordinator] Publish forward to node :3
+01:15.108	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:15.110	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:15.119	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.123	ID:9	[PAN Coordinator] Publish forward to node :5
+01:15.126	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:15.137	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.143	ID:9	[PAN Coordinator] Publish forward to node :6
+01:15.146	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:15.157	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.160	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:15.162	ID:9	[PAN Coordinator] Publish forward to node :6
+01:15.166	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:15.169	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:15.179	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 13259
+01:15.182	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:15.182	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:15.191	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:19.720	ID:7	[NODE 7]New data available from Topic:1; Humidity: 7363
+01:19.725	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 7363
+01:19.735	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 7363
+01:19.756	ID:9	[PAN Coordinator] Publish forward to node :1
+01:19.759	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:19.773	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.775	ID:9	[PAN Coordinator] Publish forward to node :2
+01:19.778	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:19.791	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.795	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:19.795	ID:9	[PAN Coordinator] Publish forward to node :2
+01:19.798	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:19.806	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:19.809	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.812	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:19.814	ID:9	[PAN Coordinator] Publish forward to node :4
+01:19.817	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:19.824	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:19.831	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.834	ID:9	[PAN Coordinator] Publish forward to node :4
+01:19.834	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:19.838	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:19.841	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:19.849	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.852	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:19.853	ID:9	[PAN Coordinator] Publish forward to node :5
+01:19.857	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:19.862	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:19.865	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.873	ID:9	[PAN Coordinator] Publish forward to node :8
+01:19.876	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:19.886	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.890	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:19.893	ID:9	[PAN Coordinator] Publish forward to node :8
+01:19.897	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:19.900	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:19.907	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 7363
+01:19.910	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:19.913	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:19.920	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:22.641	ID:5	[NODE 5]New data available from Topic:2; Luminosity: 22800
+01:22.646	ID:5	[NODE 5] Sent Publish to PAN Coordinator, QoS:0, Topic:2 , Data: 22800
+01:22.654	ID:9	[PAN Coordinator] Received PUBLISH message from 5, Qos: 0, Topic:2, Data: 22800
+01:22.676	ID:9	[PAN Coordinator] Publish forward to node :2
+01:22.679	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:22.690	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.693	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:22.695	ID:9	[PAN Coordinator] Publish forward to node :2
+01:22.699	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:22.704	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.705	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:22.708	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:22.716	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:22.719	ID:9	[PAN Coordinator] Publish forward to node :3
+01:22.722	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:22.733	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.734	ID:9	[PAN Coordinator] Publish forward to node :6
+01:22.738	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:22.743	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.746	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:22.755	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:22.757	ID:9	[PAN Coordinator] Publish forward to node :8
+01:22.760	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:22.770	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.773	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:22.773	ID:9	[PAN Coordinator] Publish forward to node :8
+01:22.776	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:22.782	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:22.790	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 22800
+01:22.793	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:22.793	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:22.803	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:30.392	ID:7	[NODE 7]New data available from Topic:1; Humidity: 29051
+01:30.398	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 29051
+01:30.402	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 29051
+01:30.424	ID:9	[PAN Coordinator] Publish forward to node :1
+01:30.427	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:30.435	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.443	ID:9	[PAN Coordinator] Publish forward to node :2
+01:30.446	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:30.455	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.458	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:30.464	ID:9	[PAN Coordinator] Publish forward to node :2
+01:30.467	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:30.470	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:30.477	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.480	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:30.482	ID:9	[PAN Coordinator] Publish forward to node :4
+01:30.487	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:30.490	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:30.493	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.496	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:30.503	ID:9	[PAN Coordinator] Publish forward to node :4
+01:30.506	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:30.509	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:30.519	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.521	ID:9	[PAN Coordinator] Publish forward to node :5
+01:30.522	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:30.525	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:30.530	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.532	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:30.541	ID:9	[PAN Coordinator] Publish forward to node :8
+01:30.544	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:30.557	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.561	ID:9	[PAN Coordinator] Publish forward to node :8
+01:30.561	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:30.564	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:30.569	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:30.577	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 29051
+01:30.580	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:30.581	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:30.587	ID:2	[NODE 2]New data available from Topic:2; Luminosity: 40850
+01:30.591	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:30.593	ID:2	[NODE 2] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 40850
+01:30.598	ID:9	[PAN Coordinator] Received PUBLISH message from 2, Qos: 1, Topic:2, Data: 40850
+01:30.601	ID:9	[PAN Coordinator] Sent PUBACK to Node 2
+01:30.612	ID:2	[NODE 2] Puback received by PAN Coordinator
+01:30.613	ID:4	[NODE 4]New data available from Topic:1; Humidity: 4390
+01:30.618	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 4390
+01:30.623	ID:9	[PAN Coordinator] Publish forward to node :3
+01:30.628	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:30.632	ID:9	[PAN Coordinator] Discarded Publish received from Node 4, waiting for complete forwarding
+01:30.633	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 40850
+01:30.643	ID:9	[PAN Coordinator] Publish forward to node :5
+01:30.646	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:30.652	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 40850
+01:30.662	ID:9	[PAN Coordinator] Publish forward to node :6
+01:30.666	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:30.671	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 40850
+01:30.675	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:30.679	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:30.682	ID:9	[PAN Coordinator] Publish forward to node :8
+01:30.685	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:30.690	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 40850
+01:30.694	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:30.698	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:30.702	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:33.211	ID:1	[NODE 1]New data available from Topic:1; Humidity: 9497
+01:33.216	ID:1	[NODE 1] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 9497
+01:33.226	ID:9	[PAN Coordinator] Received PUBLISH message from 1, Qos: 0, Topic:1, Data: 9497
+01:33.248	ID:9	[PAN Coordinator] Publish forward to node :2
+01:33.251	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:33.260	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.263	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:33.268	ID:9	[PAN Coordinator] Publish forward to node :2
+01:33.272	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:33.275	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:33.278	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.281	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:33.288	ID:9	[PAN Coordinator] Publish forward to node :4
+01:33.291	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:33.295	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:33.298	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.301	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:33.308	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:33.310	ID:9	[PAN Coordinator] Publish forward to node :5
+01:33.313	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:33.326	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.326	ID:9	[PAN Coordinator] Publish forward to node :7
+01:33.329	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:33.342	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.346	ID:9	[PAN Coordinator] Publish forward to node :8
+01:33.349	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:33.359	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.362	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:33.365	ID:9	[PAN Coordinator] Publish forward to node :8
+01:33.368	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:33.375	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:33.379	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 9497
+01:33.383	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:33.385	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:33.394	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:36.480	ID:4	[NODE 4] Puback not received. Try again
+01:36.485	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 4390
+01:36.489	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 0, Topic:1, Data: 4390
+01:36.511	ID:9	[PAN Coordinator] Publish forward to node :1
+01:36.514	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:36.523	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.530	ID:9	[PAN Coordinator] Publish forward to node :2
+01:36.533	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:36.544	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.548	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:36.551	ID:9	[PAN Coordinator] Publish forward to node :2
+01:36.554	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:36.558	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:36.562	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.565	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:36.570	ID:9	[PAN Coordinator] Publish forward to node :5
+01:36.573	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:36.577	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:36.581	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.589	ID:9	[PAN Coordinator] Publish forward to node :7
+01:36.592	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:36.602	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.608	ID:9	[PAN Coordinator] Publish forward to node :8
+01:36.611	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:36.625	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.628	ID:9	[PAN Coordinator] Publish forward to node :8
+01:36.628	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:36.632	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:36.635	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:36.644	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 4390
+01:36.647	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:36.648	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:36.658	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:41.064	ID:7	[NODE 7]New data available from Topic:1; Humidity: 45420
+01:41.069	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 45420
+01:41.080	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 45420
+01:41.102	ID:9	[PAN Coordinator] Publish forward to node :1
+01:41.105	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:41.111	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.121	ID:9	[PAN Coordinator] Publish forward to node :2
+01:41.124	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:41.136	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.139	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:41.141	ID:9	[PAN Coordinator] Publish forward to node :2
+01:41.144	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:41.150	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:41.153	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.157	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:41.160	ID:9	[PAN Coordinator] Publish forward to node :4
+01:41.164	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:41.168	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:41.173	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.176	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:41.180	ID:9	[PAN Coordinator] Publish forward to node :4
+01:41.183	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:41.199	ID:9	[PAN Coordinator] Publish forward to node :4
+01:41.202	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:41.214	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.217	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:41.219	ID:9	[PAN Coordinator] Publish forward to node :4
+01:41.223	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:41.227	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.228	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:41.231	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:41.237	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:41.240	ID:9	[PAN Coordinator] Publish forward to node :5
+01:41.243	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:41.255	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.258	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.261	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.270	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.273	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:41.277	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.280	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.297	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.300	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.314	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.316	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.317	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:41.320	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.336	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.339	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.349	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.352	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:41.355	ID:9	[PAN Coordinator] Publish forward to node :8
+01:41.358	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:41.365	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:41.367	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 45420
+01:41.371	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:41.377	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:41.379	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:45.234	ID:8	[NODE 8]New data available from Topic:2; Luminosity: 61545
+01:45.240	ID:8	[NODE 8] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 61545
+01:45.243	ID:9	[PAN Coordinator] Received PUBLISH message from 8, Qos: 1, Topic:2, Data: 61545
+01:45.246	ID:9	[PAN Coordinator] Sent PUBACK to Node 8
+01:45.254	ID:8	[NODE 8] Puback received by PAN Coordinator
+01:45.268	ID:9	[PAN Coordinator] Publish forward to node :2
+01:45.271	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:45.281	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.284	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:45.287	ID:9	[PAN Coordinator] Publish forward to node :2
+01:45.291	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:45.295	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:45.299	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.302	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:45.308	ID:9	[PAN Coordinator] Publish forward to node :3
+01:45.311	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:45.314	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:45.317	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.326	ID:9	[PAN Coordinator] Publish forward to node :5
+01:45.329	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:45.336	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.346	ID:9	[PAN Coordinator] Publish forward to node :6
+01:45.349	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:45.361	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.364	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:45.365	ID:9	[PAN Coordinator] Publish forward to node :6
+01:45.368	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:45.373	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:45.380	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 61545
+01:45.383	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:45.385	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:45.394	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:46.691	ID:4	[NODE 4]New data available from Topic:1; Humidity: 32962
+01:46.697	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 32962
+01:46.701	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 1, Topic:1, Data: 32962
+01:46.705	ID:9	[PAN Coordinator] Sent PUBACK to Node 4
+01:46.707	ID:4	[NODE 4] Puback received by PAN Coordinator
+01:46.727	ID:9	[PAN Coordinator] Publish forward to node :1
+01:46.730	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:46.738	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.746	ID:9	[PAN Coordinator] Publish forward to node :2
+01:46.750	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:46.754	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.757	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:46.765	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:46.767	ID:9	[PAN Coordinator] Publish forward to node :5
+01:46.771	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:46.775	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.785	ID:9	[PAN Coordinator] Publish forward to node :7
+01:46.788	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:46.798	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.805	ID:9	[PAN Coordinator] Publish forward to node :8
+01:46.808	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:46.817	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.820	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:46.825	ID:9	[PAN Coordinator] Publish forward to node :8
+01:46.828	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:46.831	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:46.842	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 32962
+01:46.844	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:46.845	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:46.852	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:51.736	ID:7	[NODE 7]New data available from Topic:1; Humidity: 37574
+01:51.741	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 37574
+01:51.754	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 37574
+01:51.775	ID:9	[PAN Coordinator] Publish forward to node :1
+01:51.778	ID:9	[PAN Coordinator] Sent publish to Node 1
+01:51.790	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.795	ID:9	[PAN Coordinator] Publish forward to node :2
+01:51.799	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:51.803	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.807	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:51.816	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:51.818	ID:9	[PAN Coordinator] Publish forward to node :4
+01:51.822	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:51.827	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.830	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:51.834	ID:9	[PAN Coordinator] Publish forward to node :4
+01:51.837	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:51.841	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:51.850	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.853	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:51.853	ID:9	[PAN Coordinator] Publish forward to node :5
+01:51.857	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:51.862	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.863	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:51.873	ID:9	[PAN Coordinator] Publish forward to node :8
+01:51.876	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:51.888	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.892	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:51.894	ID:9	[PAN Coordinator] Publish forward to node :8
+01:51.897	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:51.900	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:51.906	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 37574
+01:51.910	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:51.913	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:51.917	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:54.695	ID:1	[NODE 1]New data available from Topic:1; Humidity: 43366
+01:54.701	ID:1	[NODE 1] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 43366
+01:54.706	ID:9	[PAN Coordinator] Received PUBLISH message from 1, Qos: 0, Topic:1, Data: 43366
+01:54.727	ID:9	[PAN Coordinator] Publish forward to node :2
+01:54.731	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:54.743	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.746	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:54.747	ID:9	[PAN Coordinator] Publish forward to node :2
+01:54.750	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:54.755	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:54.759	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.763	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:54.766	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:54.768	ID:9	[PAN Coordinator] Publish forward to node :4
+01:54.771	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:54.778	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.781	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:54.786	ID:9	[PAN Coordinator] Publish forward to node :4
+01:54.791	ID:9	[PAN Coordinator] Sent publish to Node 4
+01:54.794	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:54.796	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.799	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+01:54.805	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+01:54.807	ID:9	[PAN Coordinator] Publish forward to node :5
+01:54.810	ID:9	[PAN Coordinator] Sent publish to Node 5
+01:54.817	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.825	ID:9	[PAN Coordinator] Publish forward to node :7
+01:54.828	ID:9	[PAN Coordinator] Sent publish to Node 7
+01:54.841	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.845	ID:9	[PAN Coordinator] Publish forward to node :8
+01:54.848	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:54.854	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.857	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:54.865	ID:9	[PAN Coordinator] Publish forward to node :8
+01:54.868	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:54.871	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:54.879	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 43366
+01:54.882	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:54.884	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:54.894	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:58.250	ID:5	[NODE 5]New data available from Topic:2; Luminosity: 7062
+01:58.256	ID:5	[NODE 5] Sent Publish to PAN Coordinator, QoS:0, Topic:2 , Data: 7062
+01:58.261	ID:9	[PAN Coordinator] Received PUBLISH message from 5, Qos: 0, Topic:2, Data: 7062
+01:58.283	ID:9	[PAN Coordinator] Publish forward to node :2
+01:58.286	ID:9	[PAN Coordinator] Sent publish to Node 2
+01:58.293	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.296	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+01:58.304	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+01:58.306	ID:9	[PAN Coordinator] Publish forward to node :3
+01:58.310	ID:9	[PAN Coordinator] Sent publish to Node 3
+01:58.313	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.322	ID:9	[PAN Coordinator] Publish forward to node :6
+01:58.325	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:58.335	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.338	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:58.342	ID:9	[PAN Coordinator] Publish forward to node :6
+01:58.346	ID:9	[PAN Coordinator] Sent publish to Node 6
+01:58.350	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:58.352	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.356	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+01:58.360	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+01:58.362	ID:9	[PAN Coordinator] Publish forward to node :8
+01:58.365	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:58.374	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.377	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:58.381	ID:9	[PAN Coordinator] Publish forward to node :8
+01:58.384	ID:9	[PAN Coordinator] Sent publish to Node 8
+01:58.390	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+01:58.398	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 7062
+01:58.401	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+01:58.402	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+01:58.405	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:02.408	ID:7	[NODE 7]New data available from Topic:1; Humidity: 2904
+02:02.414	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 2904
+02:02.417	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 2904
+02:02.438	ID:9	[PAN Coordinator] Publish forward to node :1
+02:02.441	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:02.450	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.458	ID:9	[PAN Coordinator] Publish forward to node :2
+02:02.461	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:02.468	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.471	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:02.477	ID:9	[PAN Coordinator] Publish forward to node :2
+02:02.482	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:02.485	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:02.490	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.494	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:02.497	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:02.499	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.502	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.514	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.517	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.517	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+02:02.520	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.536	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.539	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.556	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.559	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.575	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.579	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.595	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.598	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.614	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.617	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.634	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.637	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.653	ID:9	[PAN Coordinator] Publish forward to node :4
+02:02.657	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:02.662	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.665	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+02:02.672	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+02:02.674	ID:9	[PAN Coordinator] Publish forward to node :5
+02:02.677	ID:9	[PAN Coordinator] Sent publish to Node 5
+02:02.686	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.692	ID:9	[PAN Coordinator] Publish forward to node :8
+02:02.696	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:02.700	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 2904
+02:02.703	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:02.710	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:02.713	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:02.769	ID:4	[NODE 4]New data available from Topic:1; Humidity: 52644
+02:02.774	ID:4	[NODE 4] Sent Publish to PAN Coordinator, QoS:1, Topic:1 , Data: 52644
+02:02.785	ID:9	[PAN Coordinator] Received PUBLISH message from 4, Qos: 1, Topic:1, Data: 52644
+02:02.789	ID:9	[PAN Coordinator] Sent PUBACK to Node 4
+02:02.791	ID:4	[NODE 4] Puback received by PAN Coordinator
+02:02.811	ID:9	[PAN Coordinator] Publish forward to node :1
+02:02.814	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:02.822	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.830	ID:9	[PAN Coordinator] Publish forward to node :2
+02:02.833	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:02.843	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.846	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:02.850	ID:9	[PAN Coordinator] Publish forward to node :2
+02:02.853	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:02.857	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:02.866	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.869	ID:9	[PAN Coordinator] Publish forward to node :5
+02:02.869	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:02.873	ID:9	[PAN Coordinator] Sent publish to Node 5
+02:02.876	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:02.885	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.889	ID:9	[PAN Coordinator] Publish forward to node :7
+02:02.892	ID:9	[PAN Coordinator] Sent publish to Node 7
+02:02.899	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.908	ID:9	[PAN Coordinator] Publish forward to node :8
+02:02.911	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:02.925	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.928	ID:9	[PAN Coordinator] Publish forward to node :8
+02:02.928	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:02.933	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:02.935	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:02.938	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 52644
+02:02.941	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:02.945	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:02.948	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:03.122	ID:6	[NODE 6]New data available from Topic:0; Temperature: 17227
+02:03.127	ID:6	[NODE 6] Sent Publish to PAN Coordinator, QoS:0, Topic:0 , Data: 17227
+02:03.135	ID:9	[PAN Coordinator] Received PUBLISH message from 6, Qos: 0, Topic:0, Data: 17227
+02:03.157	ID:9	[PAN Coordinator] Publish forward to node :1
+02:03.160	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:03.167	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 0, Data: 17227
+02:03.170	ID:1	[NODE 1] Sent PUBACK to PAN Coordinator
+02:03.176	ID:9	[PAN Coordinator] Received PUBACK message from Node 1
+02:03.179	ID:9	[PAN Coordinator] Publish forward to node :3
+02:03.182	ID:9	[PAN Coordinator] Sent publish to Node 3
+02:03.191	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 0, Data: 17227
+02:03.195	ID:3	[NODE 3] Sent PUBACK to PAN Coordinator
+02:03.198	ID:9	[PAN Coordinator] Received PUBACK message from Node 3
+02:03.200	ID:9	[PAN Coordinator] Publish forward to node :4
+02:03.203	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:03.213	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 0, Data: 17227
+02:03.216	ID:9	[PAN Coordinator] Publish forward to node :7
+02:03.219	ID:9	[PAN Coordinator] Sent publish to Node 7
+02:03.231	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 17227
+02:03.234	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+02:03.235	ID:9	[PAN Coordinator] Publish forward to node :7
+02:03.240	ID:9	[PAN Coordinator] Sent publish to Node 7
+02:03.242	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+02:03.249	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 17227
+02:03.252	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+02:03.255	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:03.263	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+02:10.640	ID:3	[NODE 3]New data available from Topic:0; Temperature: 48398
+02:10.646	ID:3	[NODE 3] Sent Publish to PAN Coordinator, QoS:1, Topic:0 , Data: 48398
+02:10.651	ID:9	[PAN Coordinator] Received PUBLISH message from 3, Qos: 1, Topic:0, Data: 48398
+02:10.654	ID:9	[PAN Coordinator] Sent PUBACK to Node 3
+02:10.658	ID:3	[NODE 3] Puback received by PAN Coordinator
+02:10.676	ID:9	[PAN Coordinator] Publish forward to node :1
+02:10.679	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:10.689	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.692	ID:1	[NODE 1] Sent PUBACK to PAN Coordinator
+02:10.695	ID:9	[PAN Coordinator] Publish forward to node :1
+02:10.699	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:10.702	ID:9	[PAN Coordinator] Received PUBACK message from Node 1
+02:10.711	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.714	ID:1	[NODE 1] Sent PUBACK to PAN Coordinator
+02:10.715	ID:9	[PAN Coordinator] Publish forward to node :4
+02:10.719	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:10.723	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.724	ID:9	[PAN Coordinator] Received PUBACK message from Node 1
+02:10.734	ID:9	[PAN Coordinator] Publish forward to node :6
+02:10.737	ID:9	[PAN Coordinator] Sent publish to Node 6
+02:10.751	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.754	ID:9	[PAN Coordinator] Publish forward to node :7
+02:10.757	ID:9	[PAN Coordinator] Sent publish to Node 7
+02:10.769	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.772	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+02:10.773	ID:9	[PAN Coordinator] Publish forward to node :7
+02:10.778	ID:9	[PAN Coordinator] Sent publish to Node 7
+02:10.780	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+02:10.789	ID:7	[NODE 7] Publish received by PAN Coordinator, Topic: 0, Data: 48398
+02:10.792	ID:7	[NODE 7] Sent PUBACK to PAN Coordinator
+02:10.793	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:10.804	ID:9	[PAN Coordinator] Received PUBACK message from Node 7
+02:11.603	ID:2	[NODE 2]New data available from Topic:2; Luminosity: 1152
+02:11.608	ID:2	[NODE 2] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 1152
+02:11.618	ID:9	[PAN Coordinator] Received PUBLISH message from 2, Qos: 1, Topic:2, Data: 1152
+02:11.621	ID:9	[PAN Coordinator] Sent PUBACK to Node 2
+02:11.631	ID:2	[NODE 2] Puback received by PAN Coordinator
+02:11.643	ID:9	[PAN Coordinator] Publish forward to node :3
+02:11.646	ID:9	[PAN Coordinator] Sent publish to Node 3
+02:11.653	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 1152
+02:11.662	ID:9	[PAN Coordinator] Publish forward to node :5
+02:11.665	ID:9	[PAN Coordinator] Sent publish to Node 5
+02:11.673	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 2, Data: 1152
+02:11.682	ID:9	[PAN Coordinator] Publish forward to node :6
+02:11.685	ID:9	[PAN Coordinator] Sent publish to Node 6
+02:11.694	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 1152
+02:11.697	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+02:11.701	ID:9	[PAN Coordinator] Publish forward to node :6
+02:11.705	ID:9	[PAN Coordinator] Sent publish to Node 6
+02:11.709	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+02:11.712	ID:6	[NODE 6] Publish received by PAN Coordinator, Topic: 2, Data: 1152
+02:11.715	ID:6	[NODE 6] Sent PUBACK to PAN Coordinator
+02:11.722	ID:9	[PAN Coordinator] Publish forward to node :8
+02:11.726	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:11.728	ID:9	[PAN Coordinator] Received PUBACK message from Node 6
+02:11.730	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 2, Data: 1152
+02:11.733	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:11.739	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:11.742	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:13.080	ID:7	[NODE 7]New data available from Topic:1; Humidity: 31298
+02:13.085	ID:7	[NODE 7] Sent Publish to PAN Coordinator, QoS:0, Topic:1 , Data: 31298
+02:13.094	ID:9	[PAN Coordinator] Received PUBLISH message from 7, Qos: 0, Topic:1, Data: 31298
+02:13.115	ID:9	[PAN Coordinator] Publish forward to node :1
+02:13.118	ID:9	[PAN Coordinator] Sent publish to Node 1
+02:13.132	ID:1	[NODE 1] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.135	ID:9	[PAN Coordinator] Publish forward to node :2
+02:13.138	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:13.144	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.147	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:13.155	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:13.157	ID:9	[PAN Coordinator] Publish forward to node :4
+02:13.160	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:13.167	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.170	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+02:13.174	ID:9	[PAN Coordinator] Publish forward to node :4
+02:13.177	ID:9	[PAN Coordinator] Sent publish to Node 4
+02:13.181	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+02:13.188	ID:4	[NODE 4] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.192	ID:4	[NODE 4] Sent PUBACK to PAN Coordinator
+02:13.193	ID:9	[PAN Coordinator] Publish forward to node :5
+02:13.196	ID:9	[PAN Coordinator] Sent publish to Node 5
+02:13.205	ID:9	[PAN Coordinator] Received PUBACK message from Node 4
+02:13.207	ID:5	[NODE 5] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.213	ID:9	[PAN Coordinator] Publish forward to node :8
+02:13.216	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:13.229	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.233	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:13.234	ID:9	[PAN Coordinator] Publish forward to node :8
+02:13.237	ID:9	[PAN Coordinator] Sent publish to Node 8
+02:13.239	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:13.247	ID:8	[NODE 8] Publish received by PAN Coordinator, Topic: 1, Data: 31298
+02:13.251	ID:8	[NODE 8] Sent PUBACK to PAN Coordinator
+02:13.254	ID:9	[PAN Coordinator] Finished to forward publish message to subcribed nodes
+02:13.256	ID:9	[PAN Coordinator] Received PUBACK message from Node 8
+02:15.437	ID:8	[NODE 8]New data available from Topic:2; Luminosity: 56094
+02:15.443	ID:8	[NODE 8] Sent Publish to PAN Coordinator, QoS:1, Topic:2 , Data: 56094
+02:15.446	ID:9	[PAN Coordinator] Received PUBLISH message from 8, Qos: 1, Topic:2, Data: 56094
+02:15.449	ID:9	[PAN Coordinator] Sent PUBACK to Node 8
+02:15.456	ID:8	[NODE 8] Puback received by PAN Coordinator
+02:15.470	ID:9	[PAN Coordinator] Publish forward to node :2
+02:15.473	ID:9	[PAN Coordinator] Sent publish to Node 2
+02:15.480	ID:2	[NODE 2] Publish received by PAN Coordinator, Topic: 2, Data: 56094
+02:15.484	ID:2	[NODE 2] Sent PUBACK to PAN Coordinator
+02:15.490	ID:9	[PAN Coordinator] Received PUBACK message from Node 2
+02:15.492	ID:9	[PAN Coordinator] Publish forward to node :3
+02:15.495	ID:9	[PAN Coordinator] Sent publish to Node 3
+02:15.506	ID:3	[NODE 3] Publish received by PAN Coordinator, Topic: 2, Data: 56094
+02:15.509	ID:9	[PAN Coordinator] Publish forward to node :5
+02:15.512	ID:9	[PAN Coordinator] Sent publish to Node 5
