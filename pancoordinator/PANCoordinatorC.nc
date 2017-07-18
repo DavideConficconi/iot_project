@@ -257,15 +257,15 @@ module PANCoordinatorC {
         uint16_t index;
         for(index = 0; index < NNODE; index++){
             if(publish_list[index] == TRUE){
-                printf("[PAN Coordinator] Publish forward to node :%u\n",index + 1);
+                //printf("[PAN Coordinator] Publish forward to node :%u\n",index + 1);
 
                 if( call AMSend.send(index + 1, &publish_packet, sizeof(my_msg_t)) == SUCCESS)
                 {
-                    printf("[PAN Coordinator] Sent publish to Node %u\n", index + 1);
+                    printf("[PAN Coordinator] Forward publish from Node %u to Node %u\n", node_publishing, index + 1);
                     if(!qos_required[index])
                         publish_list[index] = FALSE;
                 }else
-                    printf("[PAN Coordinator] Fail to send publish to node %u\n", index + 1);
+                    printf("[PAN Coordinator] Fail to forward publish from Node %u  to node %u\n",node_publishing ,index + 1);
             break;
             }
 
