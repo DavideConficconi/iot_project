@@ -1,3 +1,10 @@
+/*
+* The PAN Coordinator component is the responsible of collect data from nodes in the PAN and then forward each Publish message to
+* the nodes subscribed to a certain topic. 
+* It is a reactive component that according to the message received and to its status, answer to the node
+* The max number of the PAN is set to 8 as specified in the document
+* The PAN Coordinator forward a Publish message at 20 ms interval in order to not fail the forward
+*/
 #include "utils.h"
 #include "printf.h"
 
@@ -17,17 +24,23 @@ module PANCoordinatorC {
         interface Timer<TMilli> as TimeOutTimer;
 	}
 }	implementation {
+    // maintain the node that are connected to the PAN
     bool connected_nodes[NNODE];
+    // Data structure for saving the nodes subscribed to a certain topic
     bool sub_nodes_tmp[NNODE];
     bool sub_nodes_hum[NNODE];
     bool sub_nodes_lum[NNODE];
-    bool publish_list[NNODE];
-    bool qos_required[NNODE];
-    bool ready_to_receive_publish = TRUE;
+    // Data structure for saving the QoS associated to the topic for each node
     uint8_t qos_levels_tmp[NNODE];
     uint8_t qos_levels_hum[NNODE];
     uint8_t qos_levels_lum[NNODE];
+    // Support data structure to handle the forward independently from the topic that PAN is forwarding
+    bool publish_list[NNODE];
+    bool qos_required[NNODE];
+    // Status of the PAN if it is forwarding already a Publish
+    bool ready_to_receive_publish = TRUE;
 
+    // Save the node that is publishing and on which topic
     uint16_t node_publishing;
     uint8_t topic_publishing;
 
@@ -65,8 +78,20 @@ module PANCoordinatorC {
         printf("[PAN Coordinator] Something bad happened...\n");
     }
 
-    /********Receive interface*********/
-
+/*************Receive interface*************/
+/* Connect: if the node is not already connected then answer with a connack
+*  Subscribe: save the node that is subscribed to the topic and its QoS required then 
+*               then answer with a Suback
+*  Publish: if the PAN Coordinator is not already forwarding a Publish message reject it
+*           if the publish message comes from the same node on the same topic then forward the
+*           updated data
+*           if can forward save the actual node that is forwarding the publish and its topic
+*           if required with QoS set to 1 then answer with a Puback else start forward the message
+*           to all the subscribed node
+*  Puback: if the node is subscribed with a certain topic with QoS to 1 then will need to answer with a Puback
+*       after the Puback is received the PAN stop to send to that node the Publish message
+*
+*/
     event message_t* Receive.receive(message_t* buf, void* payload, uint8_t len){
 
     	my_msg_t* rx_msg = (my_msg_t*)payload;
@@ -130,7 +155,7 @@ module PANCoordinatorC {
         return buf;
     }
 
-/******** Asynchronous send of messages in order to answer CONNECT,SUBSCRIBE and PUBLISH ***********/
+/*************Asynchronous send of messages in order to answer CONNECT,SUBSCRIBE and PUBLISH*************/
     event void MessageTask.runTask(uint16_t dst, uint8_t msg_type, uint8_t qos, uint16_t nodeID, uint8_t topic, uint16_t payload){
             //printf("[PAN Coordinator] DEBUG: dst: %u,msg_type:%u, nodeID: %u, topic: %u, payload:%u\n", dst,msg_type,nodeID,topic,payload);
             switch(msg_type)
@@ -150,7 +175,7 @@ module PANCoordinatorC {
             }
 
     }
-/***** Creation and send of a SUBACK message*********/
+/*************Creation and send of a SUBACK message*************/
     void handle_suback(uint16_t dst, uint8_t qos, uint8_t topic){
         my_msg_t* pckt;
         pckt = call Packet.getPayload(&suback_packet,sizeof(my_msg_t));
@@ -166,7 +191,7 @@ module PANCoordinatorC {
         }
     }
 
-/*********** Creation and send of a CONNACK message*****/
+/*************Creation and send of a CONNACK message*************/
     void handle_connack(uint16_t dst, uint8_t qos){
         my_msg_t* pckt;
         pckt = call Packet.getPayload(&connack_packet,sizeof(my_msg_t));
@@ -182,7 +207,7 @@ module PANCoordinatorC {
         }
     }
 
-/********* Creation and send of a PUBACK message******/
+/*************Creation and send of a PUBACK message*************/
     void handle_puback(uint16_t dst, uint8_t qos){
         my_msg_t* pckt;
         pckt = call Packet.getPayload(&puback_packet,sizeof(my_msg_t));
@@ -195,7 +220,7 @@ module PANCoordinatorC {
         }else
             printf("[PAN Coordinator] Fail to send PUBACK to node %u\n", dst);
     }
-/******* Creation and forward of a PUBLISH message**********/
+/*************Creation and forward of a PUBLISH message*************/
    void handle_publish(uint16_t node_address, uint8_t topic, uint8_t qos, uint16_t payload) {
         my_msg_t* tx_pub_pckt;
         tx_pub_pckt = call Packet.getPayload(&publish_packet,sizeof(my_msg_t));
@@ -222,7 +247,10 @@ module PANCoordinatorC {
         call TimeOutTimer.startPeriodic(RESEND_PUB);
     }
 
-/*****Function to build the needed lists for the topic and for the required QoS*******/
+/*************Function to build the needed lists for the topic and for the required QoS*************/
+/* This structure are support structure in order to forward the message with a task with a certain QoS
+*   and to a certain node
+*/
     void build_List(bool * actual_list, uint8_t* qos_levels, uint16_t node_address){
         uint16_t index;
         for(index = 0; index < NNODE; index++){
@@ -236,7 +264,7 @@ module PANCoordinatorC {
         }
     }
 
-/****** Send Done handle*******/
+/*************Send Done handle*************/
     event void AMSend.sendDone(message_t* buf,error_t err) {
         //printf("DEBUG\n");
         if((&packet == buf || &connack_packet == buf || &suback_packet == buf || &puback_packet == buf || &publish_packet == buf)  && err == SUCCESS ){
@@ -248,11 +276,16 @@ module PANCoordinatorC {
         if ( call PacketAcknowledgements.wasAcked( buf ) );
           //printf("[PAN Coordinator] Packet acked!\n");
     }
-/******* Time Out for forward at regular intervals the PUBLISH message****/
+/*************Time Out for forward at regular intervals the PUBLISH message*************/
+/*Forward at regular intervals of the Publish message in order to not fail the send
+*/
     event void TimeOutTimer.fired(){
         post publishTask();
     }
-/****** Effective Forward of the PUBLISH message to the right node with check of Qos******/
+/*************Effective Forward of the PUBLISH message to the right node with check of Qos*************/
+/* Start forward to all the node subscribed to a certain topic and if the QoS is not set then do not forward
+*   again the message. Otherwise send again until a Puback is received.
+*/
     task void publishTask(){
         uint16_t index;
         for(index = 0; index < NNODE; index++){

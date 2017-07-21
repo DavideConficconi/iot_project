@@ -1,3 +1,14 @@
+/*
+*	This is the Node component. It is composed by a Communication part and random data generation part.
+*	The communication part is composed by a Sendr one and Receiver one. Based on the status of the node and on the message received
+*	the component will react consequently. Primarly the node tries to connect to a Coordinator by sending a Broadcast message. Once
+*	the address is acquired it will record it and then subscribe to two topic. The node then generate data on the three different topic
+*	in a round-robin fashion.
+*	The connect and subscribe message are sent and if a Ack message is not received the node will try again after a 2s + 1s*Node ID interval
+*	The QoS levels are set at compile time in a random way.
+*	The node will subscribe to 2 topic randomly chosen among the three available. 
+*	The data are generated at a regular interval of 20s + 2s*Node ID.
+*/
 #include "utils.h"
 #include "printf.h"
 
@@ -64,6 +75,7 @@ module NodeC
 			PRIMARY_TOPIC, determineQoS(PRIMARY_TOPIC), SECONDARY_TOPIC, determineQoS(SECONDARY_TOPIC), my_sensorID);
 	*/}
 
+/*************Initiation of the node by start to connect to PAN Coordinator*************/
 	event void SplitControl.startDone(error_t error){
 		//printf("MY ID %u\n", NODE_ID);
 		if(error == SUCCESS){
@@ -77,7 +89,7 @@ module NodeC
 	}
 
 	event void SplitControl.stopDone(error_t error){}
-/**** Function to determine the QoS required given a Topic*********/
+/*************Function to determine the QoS associated to a given Topic*************/
 	uint8_t determineQoS(uint8_t topic){
 		switch(topic){
         case TEMPERATURE_ID:
@@ -90,7 +102,10 @@ module NodeC
         	return 0;
 		}
 	}
-/*******Start the connection with the PAN Coordinator************/
+/*************Start the connection with the PAN Coordinator*************/
+/* It starts by sending in Broadcast a message to require the Connection
+* call a Timer that will resend the Connect message if no one answer
+*/
 	task void connectToPANTask(){
 		my_msg_t* pckt;
 		pckt = call Packet.getPayload(&connect_packet,sizeof(my_msg_t));
@@ -107,12 +122,18 @@ module NodeC
 
     	call TimeOutTimer.startOneShot(TIME_OUT_TIMER);
 	}
-/**********Handle the answer when receive a Connack*********/	
+/*************Handle the answer when receive a Connack*************/
+/* Change the status of the node and then try to Subscribe for the Primary Topic	
+*/
 	task void connackRxTask(){
         actual_status = SUBSCRIBE;
         post susbcribePrimaryTask();
 	}
-/*****Subscribe to the Primary Topic************/
+/*************Subscribe to the Primary Topic*************/
+/* Create the packet and send it to the PAN Coordinator that after a Connack message it is at
+* known address.
+* If a QoS is set then the Node will wait for a Suback from the PAN Coordinator
+*/
 	task void susbcribePrimaryTask(){
 			uint8_t qos;
 			my_msg_t* pckt;
@@ -135,7 +156,9 @@ module NodeC
 	}
 
 
-/************ Subscribe to the secondary Topic***************/
+/*************Subscribe to the secondary Topic*************/
+/* Same as above, in addition the random data generation process is started
+*/
 	task void susbcribeSecondaryTask(){
 		uint8_t qos;
 		my_msg_t* pckt;
@@ -158,15 +181,14 @@ module NodeC
     	call RandomDataTimer.startPeriodic(DATA_TIMER);
 	}
 
-	/**********Answer with a PubAck message to the PAN if required*********/
+/*************Answer with a PubAck message to the PAN if required*************/
+/*Create a PubAck message and send it to the PAN whenever it is required
+*/
 	task void pubAckTask(){
 			my_msg_t* pckt;
 			pckt = call Packet.getPayload(&puback_packet,sizeof(my_msg_t));
 			pckt->msg_type = PUBACK;
-			pckt->qos = QOS_LVL_TMP;
 			pckt->nodeID = NODE_ID;
-			pckt->topic = TEMPERATURE_ID;
-			pckt->payload = 0;
 			//printf("[NODE %u] DEBUG: msg_type:%u, qos:%u nodeID: %u, topic: %u, payload:%u\n", NODE_ID, pckt->msg_type, pckt->qos,
 			//	pckt->nodeID,pckt->topic,pckt->payload);
 			if( call AMSend.send(pan_address ,&puback_packet,sizeof(my_msg_t)) == SUCCESS)
@@ -179,7 +201,9 @@ module NodeC
 	}
 
 
-	/*************** Publish*****************/
+/*************Publish in an Asynchronous way*************/
+/* Create the Packet and put the Node in a status that will wait for a Puback and resend it after a timer
+*/
 	event void MessageTask.runTask(uint16_t dst, uint8_t msg_type, uint8_t qos, uint16_t nodeID, uint8_t topic, uint16_t payload){
 		my_msg_t* pckt;
 		pckt = call Packet.getPayload(&publish_packet,sizeof(my_msg_t));
@@ -189,18 +213,19 @@ module NodeC
 		pckt->topic = topic;
 		pckt->payload = payload;
 		//printf("[NODE %u] DEBUG: msg_type:%u, nodeID: %u, topic: %u, payload:%u\n", NODE_ID, msg_type,nodeID,topic,payload);
-		waiting_puback = TRUE;
     	if( call AMSend.send(dst ,&publish_packet,sizeof(my_msg_t)) == SUCCESS)
     	{
     		printf("[NODE %u] Sent Publish to PAN Coordinator, QoS:%u, Topic:%u , Data: %u\n", NODE_ID, qos, my_sensorID, sensor_data);
     	}
     	else
     		printf("[NODE %u] FAIL!! Publish. QoS:%u, Topic:%u , Data: %u\n", NODE_ID, qos, my_sensorID, sensor_data);
-    	if(qos)
+    	if(qos){
+    		waiting_puback = TRUE;
     		call TimeOutTimer.startOneShot(TIME_OUT_TIMER);
+    	}
 	}
 
-	/********* Finalization of sender***********/
+/*************Finalization of sender*************/
 	event void AMSend.sendDone(message_t* buf,error_t err) {
 		if((&connect_packet == buf || &subscribe_packet == buf) && err == SUCCESS );
 			//printf("[NODE %u] Packet Sent\n", NODE_ID);
@@ -211,7 +236,12 @@ module NodeC
 		 // printf("[NODE %u] Packet acked!\n", NODE_ID);
 	}
 
-	/******* Receive Interface*********/
+/*************Receive Interface*************/
+/* Connack: save the address of the PAN Coordinator, stop the waiting and react correspondingly
+*  Suback: react depending on which suback is received for the primary or secondary topic
+*  Puback: Ok, stop resending if QoS set to one.
+*  Publish: if required based on the QoS level set by the previous subscribe, send the Puback
+*/
 	event message_t* Receive.receive(message_t* msg, void* payload, uint8_t len){
 
     	my_msg_t* rx_msg = (my_msg_t*)payload;
@@ -247,7 +277,7 @@ module NodeC
     	return msg;
 	}
 
-	/*********************Random Read from the different sensors****************/
+/*************Random Read from the different sensors*************/
 	event void TemperatureSensor.readDone(error_t result, uint16_t data) {
 		printf("[NODE %u]New data available from Topic:%u; Temperature: %u\n",NODE_ID, my_sensorID, data);
 		sensor_data = data;
@@ -265,7 +295,7 @@ module NodeC
 		call MessageTask.postTask(pan_address, PUBLISH,QOS_LVL_LUM,NODE_ID,my_sensorID,data);
 	}
 
-	/*********Periodic Timer for different reads*******************/
+/*************Periodic Timer for different reads*************/
 	event void RandomDataTimer.fired() {
         switch(my_sensorID)
         {
@@ -279,9 +309,10 @@ module NodeC
             call LuminositySensor.read();
             break;
         }
+        my_sensorID = (my_sensorID + 1) % TASKNUMBER;
 	}
 
-	/************Time Out Timer for resending messages*****************/
+/*************Time Out Timer for resending messages*************/
 	event void TimeOutTimer.fired() {
 		if(actual_status == CONNECT){
 			printf("[NODE %u] Connack not received. Try again\n",NODE_ID);
